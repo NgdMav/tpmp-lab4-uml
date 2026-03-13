@@ -1,9 +1,89 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0" version="29.6.1">
   <diagram name="Page-1" id="h5F2Pzkuicgr-5CZA_Jw">
-    <mxGraphModel>
+    <mxGraphModel dx="983" dy="544" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="MK8Cejpoo95wvfsZD4Ib-1" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=29;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;" value="&lt;span&gt;&lt;/span&gt;&lt;strong&gt;&lt;span&gt;Country&lt;/span&gt;&lt;/strong&gt;" vertex="1">
+          <mxGeometry height="330" width="200" x="80" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="MK8Cejpoo95wvfsZD4Ib-2" parent="MK8Cejpoo95wvfsZD4Ib-1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" value="- id: int&lt;br&gt;- name: string&lt;br&gt;- capital: string&lt;br&gt;- continentId: int&lt;br&gt;- language: string&lt;br&gt;- population: int&lt;br&gt;- area: double&lt;br&gt;- currency: string&lt;br&gt;- government: string&lt;br&gt;- headOfState: string&lt;br&gt;- flag: blob" vertex="1">
+          <mxGeometry height="171" width="200" y="29" as="geometry" />
+        </mxCell>
+        <mxCell id="MK8Cejpoo95wvfsZD4Ib-3" parent="MK8Cejpoo95wvfsZD4Ib-1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" value="+ save(): bool&lt;br&gt;+ delete(): bool&lt;br&gt;+ findById(id: int): Country&lt;br&gt;+ findByName(name: string): Country[]&lt;br&gt;+ findByContinent(continentId: int): Country[]&lt;br&gt;+ toJSON(): string" vertex="1">
+          <mxGeometry height="130" width="200" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="MK8Cejpoo95wvfsZD4Ib-4" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=29;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;" value="&lt;span&gt;&lt;/span&gt;&lt;strong&gt;&lt;span&gt;Continent&lt;/span&gt;&lt;/strong&gt;" vertex="1">
+          <mxGeometry height="150" width="200" x="500" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="MK8Cejpoo95wvfsZD4Ib-5" parent="MK8Cejpoo95wvfsZD4Ib-4" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" value="- id: int&lt;br&gt;- nameRu: string&lt;br&gt;- nameBe: string&lt;br&gt;- nameEn: string" vertex="1">
+          <mxGeometry height="71" width="200" y="29" as="geometry" />
+        </mxCell>
+        <mxCell id="MK8Cejpoo95wvfsZD4Ib-6" parent="MK8Cejpoo95wvfsZD4Ib-4" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" value="+ getById(id: int): Continent&lt;br&gt;+ getAll(): Continent[]" vertex="1">
+          <mxGeometry height="50" width="200" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="MK8Cejpoo95wvfsZD4Ib-7" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=29;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;" value="&lt;span&gt;&lt;/span&gt;&lt;strong&gt;&lt;span&gt;«singleton»&lt;/span&gt;&lt;/strong&gt;&lt;strong&gt;&lt;span&gt;DatabaseManager&lt;/span&gt;&lt;/strong&gt;" vertex="1">
+          <mxGeometry height="150" width="200" x="500" y="475" as="geometry" />
+        </mxCell>
+        <mxCell id="MK8Cejpoo95wvfsZD4Ib-8" parent="MK8Cejpoo95wvfsZD4Ib-7" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" value="- db: sqlite3*&lt;br&gt;-&amp;nbsp;&lt;u&gt;&lt;span&gt;instance&lt;/span&gt;&lt;/u&gt;:&amp;nbsp;&lt;span&gt;DatabaseManager*&lt;/span&gt;" vertex="1">
+          <mxGeometry height="41" width="200" y="29" as="geometry" />
+        </mxCell>
+        <mxCell id="MK8Cejpoo95wvfsZD4Ib-9" parent="MK8Cejpoo95wvfsZD4Ib-7" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" value="+ open(filename: string): int&lt;br&gt;+ exec(sql: string): int&lt;br&gt;+ prepare(sql: string): sqlite3_stmt*&lt;br&gt;+ close(): void&lt;br&gt;+ &lt;u&gt;getInstance&lt;/u&gt;(): DatabaseManager" vertex="1">
+          <mxGeometry height="80" width="200" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="MK8Cejpoo95wvfsZD4Ib-12" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=29;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;" value="&lt;strong&gt;&lt;code&gt;Main&lt;/code&gt;&lt;/strong&gt;" vertex="1">
+          <mxGeometry height="120" width="200" x="100" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="MK8Cejpoo95wvfsZD4Ib-13" parent="MK8Cejpoo95wvfsZD4Ib-12" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" value="-&amp;nbsp;&lt;span&gt;running: bool&lt;/span&gt;" vertex="1">
+          <mxGeometry height="31" width="200" y="29" as="geometry" />
+        </mxCell>
+        <mxCell id="MK8Cejpoo95wvfsZD4Ib-14" parent="MK8Cejpoo95wvfsZD4Ib-12" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" value="+ main()&lt;br&gt;+ displayMenu(): void&lt;br&gt;+ handleChoice(choice: int): void" vertex="1">
+          <mxGeometry height="60" width="200" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="MK8Cejpoo95wvfsZD4Ib-15" edge="1" parent="1" source="MK8Cejpoo95wvfsZD4Ib-2" style="endArrow=classic;startArrow=none;endFill=1;startFill=0;endSize=8;html=1;verticalAlign=bottom;labelBackgroundColor=none;strokeWidth=2;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="MK8Cejpoo95wvfsZD4Ib-5" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="280" y="320" as="sourcePoint" />
+            <mxPoint x="440" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MK8Cejpoo95wvfsZD4Ib-16" connectable="0" parent="MK8Cejpoo95wvfsZD4Ib-15" style="edgeLabel;html=1;align=right;verticalAlign=top;resizable=0;points=[];fontSize=23;labelPosition=left;verticalLabelPosition=bottom;" value="*" vertex="1">
+          <mxGeometry relative="1" x="-0.9166" y="-1" as="geometry">
+            <mxPoint y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MK8Cejpoo95wvfsZD4Ib-17" connectable="0" parent="MK8Cejpoo95wvfsZD4Ib-15" style="edgeLabel;html=1;align=right;verticalAlign=top;resizable=0;points=[];labelPosition=left;verticalLabelPosition=top;fontSize=14;" value="1" vertex="1">
+          <mxGeometry relative="1" x="0.8809" y="3" as="geometry">
+            <mxPoint x="11" y="9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MK8Cejpoo95wvfsZD4Ib-18" edge="1" parent="1" source="MK8Cejpoo95wvfsZD4Ib-13" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="MK8Cejpoo95wvfsZD4Ib-8" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="350" y="400" as="sourcePoint" />
+            <mxPoint x="510" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MK8Cejpoo95wvfsZD4Ib-19" edge="1" parent="1" source="MK8Cejpoo95wvfsZD4Ib-13" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="MK8Cejpoo95wvfsZD4Ib-3" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="280" y="550.52" as="sourcePoint" />
+            <mxPoint x="480" y="440.52" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MK8Cejpoo95wvfsZD4Ib-20" edge="1" parent="1" source="MK8Cejpoo95wvfsZD4Ib-7" style="endArrow=classic;startArrow=none;endFill=1;startFill=0;endSize=8;html=1;verticalAlign=bottom;labelBackgroundColor=none;strokeWidth=2;rounded=0;entryX=0.999;entryY=0.96;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryPerimeter=0;" target="MK8Cejpoo95wvfsZD4Ib-2" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="330" y="399.52" as="sourcePoint" />
+            <mxPoint x="550" y="359.52" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MK8Cejpoo95wvfsZD4Ib-21" connectable="0" parent="MK8Cejpoo95wvfsZD4Ib-20" style="edgeLabel;html=1;align=right;verticalAlign=top;resizable=0;points=[];fontSize=14;labelPosition=left;verticalLabelPosition=bottom;" value="&lt;font&gt;1&lt;/font&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.9166" y="-1" as="geometry">
+            <mxPoint x="19" y="-6" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MK8Cejpoo95wvfsZD4Ib-22" connectable="0" parent="MK8Cejpoo95wvfsZD4Ib-20" style="edgeLabel;html=1;align=right;verticalAlign=top;resizable=0;points=[];labelPosition=left;verticalLabelPosition=top;fontSize=23;" value="*" vertex="1">
+          <mxGeometry relative="1" x="0.8809" y="3" as="geometry">
+            <mxPoint x="-16" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
