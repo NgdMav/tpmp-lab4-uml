@@ -1,9 +1,59 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0" version="29.6.1">
   <diagram name="Page-1" id="Tx0QtjnNbSDGkUAnWwpY">
-    <mxGraphModel dx="1426" dy="789" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2276" dy="789" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <object placeholders="1" c4Name="Система управления автомастерскими" c4Type="SystemScopeBoundary" c4Application="Software System" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;&lt;div style=&quot;text-align: left&quot;&gt;%c4Name%&lt;/div&gt;&lt;/b&gt;&lt;/font&gt;&lt;div style=&quot;text-align: left&quot;&gt;[%c4Application%]&lt;/div&gt;" id="Rd_C82tID0OX8ih5fsfr-1">
+          <mxCell parent="1" style="rounded=1;fontSize=11;whiteSpace=wrap;html=1;dashed=1;arcSize=20;fillColor=none;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=none;align=left;verticalAlign=bottom;labelBorderColor=none;spacingTop=0;spacing=10;dashPattern=8 4;metaEdit=1;rotatable=0;perimeter=rectanglePerimeter;noLabel=0;labelPadding=0;allowArrows=0;connectable=0;expand=0;recursiveResize=0;editable=1;pointerEvents=0;absoluteArcSize=1;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
+            <mxGeometry height="520" width="1000" x="120" y="240" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="Rd_C82tID0OX8ih5fsfr-2" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="&lt;code&gt;Заведующий&lt;/code&gt;" vertex="1">
+          <mxGeometry height="60" width="30" x="10" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="Rd_C82tID0OX8ih5fsfr-3" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="&lt;code&gt;Мастер&lt;/code&gt;" vertex="1">
+          <mxGeometry height="60" width="30" x="10" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="Rd_C82tID0OX8ih5fsfr-4" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="&lt;code&gt;Клиент&lt;/code&gt;" vertex="1">
+          <mxGeometry height="60" width="30" x="10" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="Rd_C82tID0OX8ih5fsfr-5" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="&lt;code&gt;Бухгалтерская система&lt;/code&gt;" vertex="1">
+          <mxGeometry height="60" width="30" x="10" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="Rd_C82tID0OX8ih5fsfr-12" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="&lt;code&gt;Управление мастерскими&lt;/code&gt;" vertex="1">
+          <mxGeometry height="80" width="120" x="160" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="Rd_C82tID0OX8ih5fsfr-13" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="&lt;code&gt;Управление мастерами&lt;/code&gt;" vertex="1">
+          <mxGeometry height="80" width="120" x="320" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="Rd_C82tID0OX8ih5fsfr-14" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="&lt;code&gt;Отчет по мастерской за период&lt;/code&gt;" vertex="1">
+          <mxGeometry height="80" width="120" x="480" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="Rd_C82tID0OX8ih5fsfr-15" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="&lt;code&gt;Статистика по маркам&lt;/code&gt;" vertex="1">
+          <mxGeometry height="80" width="120" x="640" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="Rd_C82tID0OX8ih5fsfr-16" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="&lt;code&gt;Расчет выручки&lt;/code&gt;" vertex="1">
+          <mxGeometry height="80" width="120" x="800" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="Rd_C82tID0OX8ih5fsfr-17" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="&lt;code&gt;Поиск лучшей мастерской&lt;/code&gt;" vertex="1">
+          <mxGeometry height="80" width="120" x="960" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="Rd_C82tID0OX8ih5fsfr-18" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="&lt;code&gt;Просмотр своих работ&lt;/code&gt;" vertex="1">
+          <mxGeometry height="80" width="120" x="160" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="Rd_C82tID0OX8ih5fsfr-19" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="&lt;code&gt;Оформление ремонта&lt;/code&gt;" vertex="1">
+          <mxGeometry height="80" width="120" x="320" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="Rd_C82tID0OX8ih5fsfr-20" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="&lt;code&gt;Обновление статуса ремонта&lt;/code&gt;" vertex="1">
+          <mxGeometry height="80" width="120" x="480" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="Rd_C82tID0OX8ih5fsfr-21" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="&lt;code&gt;Просмотр информации об авто&lt;/code&gt;" vertex="1">
+          <mxGeometry height="80" width="120" x="640" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="Rd_C82tID0OX8ih5fsfr-22" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="&lt;code&gt;Просмотр истории ремонтов&lt;/code&gt;" vertex="1">
+          <mxGeometry height="80" width="120" x="160" y="520" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
