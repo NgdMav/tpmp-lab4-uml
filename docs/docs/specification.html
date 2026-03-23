@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Спецификация проекта | Автомастерские</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">🚗 AutoWorkshops</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Главная</a></li>
+                <li><a href="glossary.html">Глоссарий</a></li>
+                <li><a href="requirements.html">Функц. требования</a></li>
+                <li><a href="specification.html">Спецификация</a></li>
+                <li><a href="database.html">Схема БД</a></li>
+                <li><a href="nonfunctional.html">Доп. спецификация</a></li>
+                <li><a href="team-projects.html">Учебные проекты</a></li>
+                <li><a href="https://github.com/ваш-логин/garage-project" target="_blank">Код</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container" style="padding: 3rem 0;">
+            <h1>Спецификация проекта</h1>
+            
+            <h2>Диаграмма классов</h2>
+            <img src="https://github.com/NgdMav/tpmp-lab4-uml/blob/main/img/p2.svg" alt="Class Diagram" style="max-width: 100%; margin: 1rem 0;">
+            <p>Диаграмма классов отображает структуру данных приложения. Основные сущности: Workshop, Mechanic, Car, Repair, RepairType.</p>
+
+            <h2>Диаграммы деятельности</h2>
+            <h3>Оформление ремонта</h3>
+            <img src="https://github.com/NgdMav/tpmp-lab4-uml/blob/main/img/p3_1.svg" alt="Activity Diagram - Repair" style="max-width: 100%; margin: 1rem 0;">
+            <p><strong>Участники:</strong> Клиент, Мастер, Система</p>
+
+            <h3>Формирование отчета по мастерской</h3>
+            <img src="https://github.com/NgdMav/tpmp-lab4-uml/blob/main/img/p3_2.svg" alt="Activity Diagram - Report" style="max-width: 100%; margin: 1rem 0;">
+            <p><strong>Участники:</strong> Заведующий, Система</p>
+
+            <h2>Диаграммы последовательности</h2>
+            <h3>Отчет по мастеру</h3>
+            <img src="https://github.com/NgdMav/tpmp-lab4-uml/blob/main/img/p4_1.svg" alt="Sequence Diagram - Report" style="max-width: 100%; margin: 1rem 0;">
+            <p><strong>Участники:</strong> Заведующий, MainMenu, ReportController, Database</p>
+
+            <h3>Добавление нового ремонта</h3>
+            <img src="https://github.com/NgdMav/tpmp-lab4-uml/blob/main/img/p4_2.svg" alt="Sequence Diagram - Repair" style="max-width: 100%; margin: 1rem 0;">
+            <p><strong>Участники:</strong> Мастер, RepairUI, RepairController, Database</p>
+
+            <h2>🧩 Диаграмма компонентов</h2>
+            <img src="https://github.com/NgdMav/tpmp-lab4-uml/blob/main/img/p5.svg" alt="Component Diagram" style="max-width: 100%; margin: 1rem 0;">
+            <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+                <thead style="background: #f0f0f0;"><tr><th>Компонент</th><th>Тип</th><th>Описание</th></tr></thead>
+                <tbody>
+                    <tr><td>AutoworkshopApp</td><td>Executable</td><td>Главный исполняемый файл</td></tr>
+                    <tr><td>AutoworkshopLib</td><td>Library</td><td>Библиотека с логикой приложения</td></tr>
+                    <tr><td>SQLite3</td><td>External Library</td><td>Внешняя библиотека SQLite</td></tr>
+                    <tr><td>Database File</td><td>Data File</td><td>Файл базы данных garage.db</td></tr>
+                </tbody>
+            </table>
+
+            <h2>Диаграмма развертывания</h2>
+            <img src="https://github.com/NgdMav/tpmp-lab4-uml/blob/main/img/p6.svg" alt="Deployment Diagram" style="max-width: 100%; margin: 1rem 0;">
+            <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+                <thead style="background: #f0f0f0;"><tr><th>Узел</th><th>Компоненты</th><th>Описание</th></tr></thead>
+                <tbody>
+                    <tr><td>Admin PC</td><td>AutoworkshopApp, AutoworkshopLib</td><td>Компьютер заведующего</td></tr>
+                    <tr><td>Workshop PC</td><td>AutoworkshopApp, AutoworkshopLib</td><td>Компьютеры в мастерских</td></tr>
+                    <tr><td>Database Server</td><td>Database File</td><td>Сервер с файлом БД</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Проект разработан в рамках курса "Технологии программирования" | ФПМИ, БГУ | 2026</p>
+        </div>
+    </footer>
+</body>
+</html>
