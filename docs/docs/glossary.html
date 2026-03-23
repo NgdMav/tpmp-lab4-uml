@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Глоссарий | Автомастерские</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">🚗 AutoWorkshops</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Главная</a></li>
+                <li><a href="glossary.html">Глоссарий</a></li>
+                <li><a href="requirements.html">Функц. требования</a></li>
+                <li><a href="specification.html">Спецификация</a></li>
+                <li><a href="database.html">Схема БД</a></li>
+                <li><a href="nonfunctional.html">Доп. спецификация</a></li>
+                <li><a href="team-projects.html">Учебные проекты</a></li>
+                <li><a href="https://github.com/ваш-логин/garage-project" target="_blank">Код</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container" style="padding: 3rem 0;">
+            <h1>Глоссарий предметной области</h1>
+            
+            <h2>Основные термины</h2>
+            <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+                <thead style="background: #f0f0f0;">
+                    <tr><th>Термин</th><th>Описание</th><th>Синонимы</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Автомастерская</strong></td><td>Предприятие по ремонту и обслуживанию автомобилей, имеющее адрес, штат мастеров и специализацию по маркам</td><td>СТО, сервисный центр</td></tr>
+                    <tr><td><strong>Мастер</strong></td><td>Работник автомастерской, выполняющий ремонтные работы</td><td>Механик, автослесарь</td></tr>
+                    <tr><td><strong>Заказ-наряд</strong></td><td>Документ, фиксирующий факт обращения клиента и перечень работ</td><td>Заказ, наряд</td></tr>
+                    <tr><td><strong>Ремонт</strong></td><td>Процесс восстановления работоспособности автомобиля, включающий один или несколько видов работ</td><td>Обслуживание, ТО</td></tr>
+                    <tr><td><strong>Вид работ</strong></td><td>Конкретная операция по ремонту (замена масла, покраска и т.д.)</td><td>Услуга, операция</td></tr>
+                    <tr><td><strong>Клиент</strong></td><td>Владелец автомобиля, обратившийся в мастерскую</td><td>Заказчик, владелец</td></tr>
+                    <tr><td><strong>Техпаспорт</strong></td><td>Документ на автомобиль с регистрационными данными</td><td>ПТС, свидетельство о регистрации</td></tr>
+                    <tr><td><strong>Госномер</strong></td><td>Регистрационный знак автомобиля</td><td>Номерной знак</td></tr>
+                </tbody>
+            </table>
+
+            <h2>Виды работ</h2>
+            <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+                <thead style="background: #f0f0f0;">
+                    <tr><th>Вид работ</th><th>Категория</th><th>Описание</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Замена элементов кузова</td><td>Кузовные работы</td><td>Замена крыльев, дверей, капота</td></tr>
+                    <tr><td>Подбор краски и покраска</td><td>Кузовные работы</td><td>Подбор цвета, покраска деталей</td></tr>
+                    <tr><td>Замена ремней</td><td>Двигатель</td><td>Замена ремня ГРМ, генератора</td></tr>
+                    <tr><td>Регулировка клапанов</td><td>Двигатель</td><td>Настройка тепловых зазоров</td></tr>
+                    <tr><td>Замена маслосъёмных колпачков</td><td>Двигатель</td><td>Замена уплотнений клапанов</td></tr>
+                    <tr><td>Замена ведущих шестерен</td><td>Трансмиссия</td><td>Замена шестерен КПП</td></tr>
+                    <tr><td>Замена ведомых шестерен</td><td>Трансмиссия</td><td>Замена шестерен редуктора</td></tr>
+                    <tr><td>Замена масла</td><td>ТО</td><td>Замена моторного масла</td></tr>
+                    <tr><td>Замена фильтров</td><td>ТО</td><td>Замена масляного, воздушного, топливного фильтров</td></tr>
+                </tbody>
+            </table>
+
+            <h2>Показатели и атрибуты</h2>
+            <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+                <thead style="background: #f0f0f0;">
+                    <tr><th>Показатель</th><th>Описание</th><th>Ед. измерения</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Госномер</td><td>Регистрационный знак автомобиля</td><td>строка</td></tr>
+                    <tr><td>Марка</td><td>Производитель автомобиля</td><td>строка</td></tr>
+                    <tr><td>Стоимость ремонта</td><td>Цена выполненных работ</td><td>ден. ед.</td></tr>
+                    <tr><td>Выручка</td><td>Сумма всех оплаченных ремонтов</td><td>ден. ед.</td></tr>
+                    <tr><td>Период</td><td>Интервал дат для отчета</td><td>дата-дата</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Проект разработан в рамках курса "Технологии программирования" | ФПМИ, БГУ | 2026</p>
+        </div>
+    </footer>
+</body>
+</html>
