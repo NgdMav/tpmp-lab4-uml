@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Схема базы данных | Автомастерские</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">🚗 AutoWorkshops</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Главная</a></li>
+                <li><a href="glossary.html">Глоссарий</a></li>
+                <li><a href="requirements.html">Функц. требования</a></li>
+                <li><a href="specification.html">Спецификация</a></li>
+                <li><a href="database.html">Схема БД</a></li>
+                <li><a href="nonfunctional.html">Доп. спецификация</a></li>
+                <li><a href="team-projects.html">Учебные проекты</a></li>
+                <li><a href="https://github.com/ваш-логин/garage-project" target="_blank">Код</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container" style="padding: 3rem 0;">
+            <h1>Схема базы данных</h1>
+            
+            <h2>ER-диаграмма</h2>
+            <img src="https://github.com/NgdMav/tpmp-lab4-uml/blob/main/img/Automotive_Workshops_DB-2026-03-19_09-47.png" alt="ER Diagram" style="max-width: 100%; margin: 1rem 0;">
+
+            <h2>Описание таблиц</h2>
+            
+            <h3>Таблица workshops (Мастерские)</h3>
+            <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+                <thead style="background: #f0f0f0;"><tr><th>Поле</th><th>Тип</th><th>Ограничения</th><th>Описание</th></tr></thead>
+                <tbody>
+                    <tr><td>id</td><td>INTEGER</td><td>PRIMARY KEY AUTOINCREMENT</td><td>Номер мастерской</td></tr>
+                    <tr><td>address</td><td>TEXT</td><td>NOT NULL</td><td>Адрес</td></tr>
+                    <tr><td>phone</td><td>TEXT</td><td></td><td>Контактный телефон</td></tr>
+                    <tr><td>car_brands</td><td>TEXT</td><td></td><td>Перечень марок</td></tr>
+                </tbody>
+            </table>
+
+            <h3>Таблица mechanics (Мастера)</h3>
+            <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+                <thead style="background: #f0f0f0;"><tr><th>Поле</th><th>Тип</th><th>Ограничения</th><th>Описание</th></tr></thead>
+                <tbody>
+                    <tr><td>id</td><td>INTEGER</td><td>PRIMARY KEY AUTOINCREMENT</td><td>Табельный номер</td></tr>
+                    <tr><td>name</td><td>TEXT</td><td>NOT NULL</td><td>ФИО</td></tr>
+                    <tr><td>specialization</td><td>TEXT</td><td></td><td>Специализация</td></tr>
+                    <tr><td>workshop_id</td><td>INTEGER</td><td>FOREIGN KEY REFERENCES workshops(id)</td><td>ID мастерской</td></tr>
+                </tbody>
+            </table>
+
+            <h3>Таблица cars (Автомобили)</h3>
+            <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+                <thead style="background: #f0f0f0;"><tr><th>Поле</th><th>Тип</th><th>Ограничения</th><th>Описание</th></tr></thead>
+                <tbody>
+                    <tr><td>license_plate</td><td>TEXT</td><td>PRIMARY KEY</td><td>Госномер</td></tr>
+                    <tr><td>brand</td><td>TEXT</td><td>NOT NULL</td><td>Марка</td></tr>
+                    <tr><td>model</td><td>TEXT</td><td></td><td>Модель</td></tr>
+                    <tr><td>year</td><td>INTEGER</td><td></td><td>Год выпуска</td></tr>
+                    <tr><td>owner_name</td><td>TEXT</td><td>NOT NULL</td><td>ФИО владельца</td></tr>
+                    <tr><td>passport_number</td><td>TEXT</td><td>UNIQUE</td><td>Номер техпаспорта</td></tr>
+                    <tr><td>owner_address</td><td>TEXT</td><td></td><td>Адрес владельца</td></tr>
+                </tbody>
+            </table>
+
+            <h3>Таблица repair_types (Виды работ)</h3>
+            <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+                <thead style="background: #f0f0f0;"><tr><th>Поле</th><th>Тип</th><th>Ограничения</th><th>Описание</th></tr></thead>
+                <tbody>
+                    <tr><td>id</td><td>INTEGER</td><td>PRIMARY KEY AUTOINCREMENT</td><td>ID вида работ</td></tr>
+                    <tr><td>name</td><td>TEXT</td><td>NOT NULL</td><td>Название</td></tr>
+                    <tr><td>category</td><td>TEXT</td><td></td><td>Категория</td></tr>
+                    <tr><td>base_price</td><td>REAL</td><td></td><td>Базовая стоимость</td></tr>
+                </tbody>
+            </table>
+
+            <h3>Таблица repairs (Ремонты)</h3>
+            <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+                <thead style="background: #f0f0f0;"><tr><th>Поле</th><th>Тип</th><th>Ограничения</th><th>Описание</th></tr></thead>
+                <tbody>
+                    <tr><td>id</td><td>INTEGER</td><td>PRIMARY KEY AUTOINCREMENT</td><td>Номер заказа-наряда</td></tr>
+                    <tr><td>workshop_id</td><td>INTEGER</td><td>FOREIGN KEY</td><td>ID мастерской</td></tr>
+                    <tr><td>mechanic_id</td><td>INTEGER</td><td>FOREIGN KEY</td><td>ID мастера</td></tr>
+                    <tr><td>car_license</td><td>TEXT</td><td>FOREIGN KEY</td><td>Госномер авто</td></tr>
+                    <tr><td>repair_type_id</td><td>INTEGER</td><td>FOREIGN KEY</td><td>ID вида работ</td></tr>
+                    <tr><td>start_date</td><td>TEXT</td><td>NOT NULL</td><td>Дата поступления</td></tr>
+                    <tr><td>end_date</td><td>TEXT</td><td></td><td>Дата завершения</td></tr>
+                    <tr><td>cost</td><td>REAL</td><td>NOT NULL</td><td>Стоимость</td></tr>
+                    <tr><td>status</td><td>TEXT</td><td>DEFAULT 'in_progress'</td><td>Статус</td></tr>
+                </tbody>
+            </table>
+
+            <h2>Связи между таблицами</h2>
+            <ul>
+                <li><strong>workshops (1) — (M) mechanics</strong>: Одна мастерская → много мастеров</li>
+                <li><strong>workshops (1) — (M) repairs</strong>: Одна мастерская → много ремонтов</li>
+                <li><strong>mechanics (1) — (M) repairs</strong>: Один мастер → много ремонтов</li>
+                <li><strong>cars (1) — (M) repairs</strong>: Один автомобиль → много ремонтов</li>
+                <li><strong>repair_types (1) — (M) repairs</strong>: Один вид работ → много ремонтов</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Проект разработан в рамках курса "Технологии программирования" | ФПМИ, БГУ | 2026</p>
+        </div>
+    </footer>
+</body>
+</html>
