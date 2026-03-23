@@ -3,178 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Автомастерские - Проект</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            background: #f5f5f5;
-        }
-        header {
-            background: #2c3e50;
-            color: white;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-        }
-        nav {
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        nav a {
-            margin-right: 20px;
-            text-decoration: none;
-            color: #2c3e50;
-            font-weight: bold;
-        }
-        nav a:hover {
-            color: #3498db;
-        }
-        .container {
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        h1, h2, h3 {
-            color: #2c3e50;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: left;
-        }
-        th {
-            background: #f0f0f0;
-        }
-        code {
-            background: #f4f4f4;
-            padding: 2px 5px;
-            border-radius: 3px;
-            font-family: monospace;
-        }
-        pre {
-            background: #2d2d2d;
-            color: #f8f8f2;
-            padding: 15px;
-            border-radius: 5px;
-            overflow-x: auto;
-        }
-        .badge {
-            display: inline-block;
-            padding: 2px 8px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: bold;
-        }
-        .badge-admin { background: #e74c3c; color: white; }
-        .badge-mechanic { background: #3498db; color: white; }
-        .footer {
-            margin-top: 30px;
-            text-align: center;
-            color: #7f8c8d;
-            font-size: 14px;
-        }
-    </style>
+    <meta name="description" content="Система автоматизации учета работы сети автомастерских">
+    <title>Автомастерские | Проект</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Система управления автомастерскими</h1>
-        <p>Проект для автоматизации учета работы сети автомастерских</p>
-    </header>
-
-    <nav>
-        <a href="#about">О проекте</a>
-        <a href="#team">Команда</a>
-        <a href="#docs">Документация</a>
-        <a href="#repo">Репозиторий</a>
-        <a href="#links">Ссылки</a>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">AutoWorkshops</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="docs/glossary.html">Глоссарий</a></li>
+                <li><a href="docs/requirements.html">Функц. требования</a></li>
+                <li><a href="docs/specification.html">Спецификация</a></li>
+                <li><a href="docs/database.html">Схема БД</a></li>
+                <li><a href="docs/team-projects.html">Учебные проекты</a></li>
+                <li><a href="https://github.com/ваш-логин/garage-project" target="_blank">Код</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <div class="container">
-        <section id="about">
-            <h2>О проекте</h2>
-            <p>Проект «Автомастерские» представляет собой консольное приложение на языке C для учета работы сети автомастерских.</p>
-            <h3>Основные возможности:</h3>
-            <ul>
-                <li>Учет мастерских (адрес, телефон, специализация по маркам)</li>
-                <li>Учет мастеров и их специализации</li>
-                <li>Регистрация автомобилей и их владельцев</li>
-                <li>Оформление заказов на ремонт</li>
-                <li>Формирование отчетов по мастерским и мастерам</li>
-                <li>Расчет выручки и аналитика</li>
-            </ul>
+    <header class="hero">
+        <div class="container">
+            <h1>Система управления автомастерскими</h1>
+            <p>Автоматизация учета работы сети автомастерских</p>
+            <div class="hero-buttons">
+                <a href="https://github.com/ваш-логин/garage-project" class="btn btn-primary">Исходный код</a>
+                <a href="docs/requirements.html" class="btn btn-secondary">Документация</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="features">
+            <div class="container">
+                <h2>Основные возможности</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon"></div>
+                        <h3>Управление мастерскими</h3>
+                        <p>Добавление, редактирование и удаление мастерских с указанием адреса, телефона и специализации по маркам.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"></div>
+                        <h3>Учет мастеров</h3>
+                        <p>Ведение базы данных мастеров, их специализации и привязка к мастерским.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"></div>
+                        <h3>Регистрация автомобилей</h3>
+                        <p>Хранение информации об автомобилях и их владельцах.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"></div>
+                        <h3>Оформление ремонтов</h3>
+                        <p>Создание заказов-нарядов, учет выполненных работ и стоимости.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"></div>
+                        <h3>Отчеты и аналитика</h3>
+                        <p>Формирование отчетов по мастерским, мастерам и маркам автомобилей.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"></div>
+                        <h3>SQLite база данных</h3>
+                        <p>Локальное хранение данных с поддержкой сложных запросов.</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="team">
-            <h2>Команда проекта</h2>
-            <table>
-                <thead>
-                    <tr><th>Роль</th><th>ФИО</th><th>GitHub</th><th>Задачи</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td>Тимлид</td><td>Нейфельд Кирилл Юрьевич</td><td><a href="https://github.com/cin-tie">@cin-tie</a></td><td>Код проекта, управление, CI/CD</td></tr>
-                    <tr><td>Разработчик</td><td>Козлов Максим Владимирович</td><td><a href="https://github.com/NgdMav">@NgdMav</a></td><td>Диаграммы UML, схема базы данных, документация проекта</td></tr>
-                </tbody>
-            </table>
+        <section class="team">
+            <div class="container">
+                <h2>Команда проекта</h2>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <h3>Нейфельд Кирилл Юрьевич</h3>
+                        <p class="role">Тимлид</p>
+                    </div>
+                    <div class="team-card">
+                        <h3>Козлов Максим Владимирович</h3>
+                        <p class="role">Developer</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="docs">
-            <h2>Документация</h2>
-            <ul>
-                <li><a href="#">Глоссарий</a></li>
-                <li><a href="#">Функциональные требования</a> (Use Case диаграмма, текстовые сценарии)</li>
-                <li><a href="#">Спецификация проекта</a> (диаграммы классов, деятельности, последовательности)</li>
-                <li><a href="#">Схема базы данных</a> (ER-диаграмма, SQL скрипты)</li>
-                <li><a href="#">Дополнительная спецификация</a> (нефункциональные требования)</li>
-            </ul>
+        <section class="tech">
+            <div class="container">
+                <h2>Технологии</h2>
+                <div class="tech-grid">
+                    <span class="tech-badge">C (C11)</span>
+                    <span class="tech-badge">SQLite3</span>
+                    <span class="tech-badge">Makefile</span>
+                    <span class="tech-badge">GitHub Actions</span>
+                    <span class="tech-badge">UML (draw.io)</span>
+                    <span class="tech-badge">HTML/CSS</span>
+                </div>
+            </div>
         </section>
 
-        <section id="repo">
-            <h2>Репозиторий с кодом</h2>
-            <p>Исходный код проекта доступен на GitHub:</p>
-            <pre><code>git clone https://github.com/cin-tie/tpmp-gr11a-lab4-bastards</code></pre>
-            <p>или перейдите по ссылке: <a href="https://github.com/cin-tie/tpmp-gr11a-lab4-bastards">https://github.com/cin-tie/tpmp-gr11a-lab4-bastards</a></p>
+        <section class="repos">
+            <div class="container">
+                <h2>Репозитории проекта</h2>
+                <div class="repo-links">
+                    <a href="https://github.com/cin-tie/tpmp-gr11a-lab4-bastards" class="repo-card" target="_blank">
+                        <span class="repo-icon"></span>
+                        <span class="repo-name">garage-project</span>
+                        <span class="repo-desc">Основной репозиторий с кодом</span>
+                    </a>
+                    <a href="https://github.com/fpmi-tpmp2026/tpmp-gr11a-lab4-bastards/wiki" class="repo-card" target="_blank">
+                        <span class="repo-icon"></span>
+                        <span class="repo-name">garage-docs</span>
+                        <span class="repo-desc">Репозиторий с документацией (Wiki)</span>
+                    </a>
+                </div>
+            </div>
         </section>
+    </main>
 
-        <section id="links">
-            <h2>Ссылки на учебные репозитории</h2>
-            <table>
-                <thead>
-                    <tr><th>Участник</th><th>Курс GitHub Pages</th><th>Репозиторий</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td>Нейфельд К.Ю.</td><td>GitHub Pages Course</td><td><a href=""></a></td></tr>
-                    <tr><td>Козлов М.В.</td><td>GitHub Pages Course</td><td><a href=""></a></td></tr>
-                </tbody>
-            </table>
-        </section>
+    <footer>
+        <div class="container">
+            <p>Проект разработан в рамках курса "Технологии программирования" | ФПМИ, БГУ | 2026</p>
+        </div>
+    </footer>
 
-        <section id="tech">
-            <h2>Технологии</h2>
-            <ul>
-                <li><strong>Язык программирования:</strong> C (C11)</li>
-                <li><strong>База данных:</strong> SQLite3</li>
-                <li><strong>Сборка:</strong> Makefile</li>
-                <li><strong>CI/CD:</strong> GitHub Actions</li>
-                <li><strong>Документация:</strong> Markdown, GitHub Wiki, UML (draw.io)</li>
-            </ul>
-        </section>
-    </div>
-
-    <div class="footer">
-        <p>Проект разработан в рамках курса "Технологии программирования" | ФПМИ, БГУ | 2026</p>
-    </div>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
