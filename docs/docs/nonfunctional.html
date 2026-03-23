@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дополнительная спецификация | Автомастерские</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">🚗 AutoWorkshops</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Главная</a></li>
+                <li><a href="glossary.html">Глоссарий</a></li>
+                <li><a href="requirements.html">Функц. требования</a></li>
+                <li><a href="specification.html">Спецификация</a></li>
+                <li><a href="database.html">Схема БД</a></li>
+                <li><a href="nonfunctional.html">Доп. спецификация</a></li>
+                <li><a href="team-projects.html">Учебные проекты</a></li>
+                <li><a href="https://github.com/ваш-логин/garage-project" target="_blank">Код</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container" style="padding: 3rem 0;">
+            <h1>Дополнительная спецификация</h1>
+            
+            <h2>Нефункциональные требования</h2>
+
+            <h3>1. Надёжность (Reliability)</h3>
+            <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+                <thead style="background: #f0f0f0;"><tr><th>Требование</th><th>Описание</th><th>Приоритет</th></tr></thead>
+                <tbody>
+                    <tr><td>R-01</td><td>Система должна сохранять целостность данных при сбоях питания</td><td>Высокий</td></tr>
+                    <tr><td>R-02</td><td>Все транзакции должны быть атомарными</td><td>Высокий</td> </tr>
+                    <tr><td>R-03</td><td>Резервное копирование БД ежедневно</td><td>Средний</td></tr>
+                </tbody>
+            </table>
+
+            <h3>2. Удобство использования (Usability)</h3>
+            <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+                <thead style="background: #f0f0f0;"><tr><th>Требование</th><th>Описание</th><th>Приоритет</th></tr></thead>
+                <tbody>
+                    <tr><td>U-01</td><td>Интерфейс консольный с понятными подсказками</td><td>Высокий</td></tr>
+                    <tr><td>U-02</td><td>Сообщения об ошибках информативны</td><td>Высокий</td></tr>
+                    <tr><td>U-03</td><td>Время обучения нового мастера не более 30 минут</td><td>Средний</td></tr>
+                </tbody>
+            </table>
+
+            <h3>3. Производительность (Performance)</h3>
+            <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+                <thead style="background: #f0f0f0;"><tr><th>Требование</th><th>Описание</th><th>Приоритет</th></tr></thead>
+                <tbody>
+                    <tr><td>P-01</td><td>Поиск по госномеру не более 2 секунд</td><td>Высокий</td></tr>
+                    <tr><td>P-02</td><td>Формирование отчета за год не более 5 секунд</td><td>Средний</td></tr>
+                    <tr><td>P-03</td><td>Поддержка до 10 мастеров одновременно</td><td>Средний</td></tr>
+                </tbody>
+            </table>
+
+            <h3>4. Сопровождаемость (Maintainability)</h3>
+            <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+                <thead style="background: #f0f0f0;"><tr><th>Требование</th><th>Описание</th><th>Приоритет</th></tr></thead>
+                <tbody>
+                    <tr><td>M-01</td><td>Код структурирован по модели КИС</td><td>Высокий</td></tr>
+                    <tr><td>M-02</td><td>Функции документированы в формате Doxygen</td><td>Средний</td></tr>
+                    <tr><td>M-03</td><td>Сборка через Makefile</td><td>Высокий</td></tr>
+                </tbody>
+            </table>
+
+            <h3>5. Безопасность (Security)</h3>
+            <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+                <thead style="background: #f0f0f0;"><tr><th>Требование</th><th>Описание</th><th>Приоритет</th></tr></thead>
+                <tbody>
+                    <tr><td>S-01</td><td>Доступ только после аутентификации</td><td>Высокий</td></tr>
+                    <tr><td>S-02</td><td>Пароли хранятся в виде хеша</td><td>Высокий</td></tr>
+                    <tr><td>S-03</td><td>Разные роли имеют разные права доступа</td><td>Высокий</td></tr>
+                </tbody>
+            </table>
+
+            <h2>Ограничения</h2>
+            <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+                <thead style="background: #f0f0f0;"><tr><th>Ограничение</th><th>Описание</th></tr></thead>
+                <tbody>
+                    <tr><td>TECH-01</td><td>Система разрабатывается на языке C</td></tr>
+                    <tr><td>TECH-02</td><td>В качестве СУБД используется SQLite</td></tr>
+                    <tr><td>TECH-03</td><td>Сборка с помощью утилиты make</td></tr>
+                    <tr><td>TECH-04</td><td>Интерфейс только консольный (CLI)</td></tr>
+                </tbody>
+            </table>
+
+            <h2>Общие функциональные требования</h2>
+            <h3>Работа с датами</h3>
+            <ul>
+                <li>Даты хранятся в формате ISO (YYYY-MM-DD)</li>
+                <li>Поддерживаются форматы ввода: ДД.ММ.ГГГГ и ГГГГ-ММ-ДД</li>
+            </ul>
+            <h3>Валидация данных</h3>
+            <ul>
+                <li>Госномер проверяется по регулярному выражению</li>
+                <li>Стоимость ремонта должна быть положительным числом</li>
+                <li>Дата завершения не может быть раньше даты начала</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Проект разработан в рамках курса "Технологии программирования" | ФПМИ, БГУ | 2026</p>
+        </div>
+    </footer>
+</body>
+</html>
